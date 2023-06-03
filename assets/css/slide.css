@@ -10,9 +10,7 @@
 }
 
 @keyframes slide {
-  0%, 100% {background-image: url("../img/banner1.jpg");}
   25% {background-image: url("../img/harry-potter.jpg");}
   50% {background-image: url("../img/banner2.jpg");}
   75% {background-image: url("../img/banner3.jpg");}
-  87.5% {background-image: url("../img/banner4.jpg");}
 }

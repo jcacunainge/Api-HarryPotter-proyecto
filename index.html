@@ -8,33 +8,61 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="./assets/css/slide.css">
+<link rel="stylesheet" href="./assets/css/card.css">
 <body>
-    
+
 
     <header>
-        <img class="logo" src="./assets/img/logo.png" alt="">
-        <nav>
-            <ul>
-                <li><a href="">Personajes</a></li>
-                <li><a href="">Libros</a></li>
+        <div class="contenedorImagenesHeader">
+            <img class="" src="./assets/img/Logo-Hogwarts.png" width="20%" alt="">
+            <img class="logo" src="https://1000logos.net/wp-content/uploads/2017/02/Harry-Potter-Logo-2004-now.png" alt="">  
+            <img class="logo-banderas" src="./assets/img/bandera-removebg-preview.png" alt="">
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-ul-li"><a class="nav-ul-li-a" href="">Personajes</a></li>
+                <li class="nav-ul-li"><a class="nav-ul-li-a" href="">Libros</a></li>
+                <li class="nav-ul-li"><a class="nav-ul-li-a" href="">Juegos</a></li>
+                <li class="nav-ul-li"><a class="nav-ul-li-a" href="">Hechizos</a></li>
+                <li class="nav-ul-li"><a class="nav-ul-li-a" href="">Autora</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="slider">
-                <!-- <img class="banner slide-image" src="./img/banner1.jpg" alt="Imagen 1">
-                <img class="banner slide-image" src="./img/banner2.jpg" alt="Imagen 2">
-                <img class="banner slide-image" src="./img/banner3.jpg" alt="Imagen 3"> -->
-            </div>
-              <!-- <button id="prevBtn">Anterior</button>
-              <button id="nextBtn">Siguiente</button> -->
+        <div class="slider"></div>
+        <div class="tarjetas-container" id="tarjetas-container"></div>
+        <div class="pagination" id="pagination-container"></div>
+        <section class="contenedor-card">
+            <!-- <div class="card">
+                <div class="calor-superior-inferior"></div>
+                <img class="imagenPersonaje" src="https://raw.githubusercontent.com/fedeperin/harry-potter-api/main/imagenes/harry_potter.png" alt="">
+                
+                <h2>Harry Potter</h2>
+                <div class="contenedor-descripcion">
+                    <div class="descripcion-titulo">
+                        <p>Casa de Hogwarts:</p>
+                        <p>Interpretados Por:</p>
+                        <p>Apodo:</p>
+                    </div>
+                    <div class="descripcion-valor-titulo">
+                        <p>Gryffindor</p>
+                        <p>Daniel Radcliffe</p>
+                        <p>Harry</p>
+                    </div>   
+                </div>
+                <div class="calor-superior-inferior"></div>
+            </div> -->
+            <div id="tarjetas-container"></div>
         </section>
+
+        
+
     </main>
 
-    <input id="searchInput" type="text" placeholder="Buscar por nombre...">
-<ul id="personaje"></ul>
-    <!-- <script src="./script/slide.js"></script> -->
-    <script src="./script/api.js"></script>
+    <!-- <input id="searchInput" type="text" placeholder="Buscar por nombre...">
+    <ul id="personaje"></ul>-->
+    <script src="./script/slide.js"></script> 
+    <script src="./script/api.js"></script> 
 </body>
 </html>
