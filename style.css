@@ -78,9 +78,11 @@
   text-decoration: underline;
   color: var(--color-secundario);
 }
+.pagination{
+  margin-bottom: 1.7rem;
+}
 
 .footer{
-  margin-top: 2rem;
   height: 150px;
   background-color: #7F0909;
 }

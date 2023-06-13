@@ -5,8 +5,13 @@
     --color-primario: #ffc500;
     --color-secundario: #7F0909;
   }
+
+  .bodyLibros{
+    margin-top: -2.5px;
+    background-color: rgba(3, 7, 26, 0.589);
+  }
 .libros{
-   margin: 2.5rem auto;
+   margin: 0 auto;
     
 }
 .contenedor-libros{
@@ -20,7 +25,7 @@
     width: 70%;
     padding: 1rem;
     border-top: 30px solid var(--color-secundario);  
-    margin: 0 auto 1rem;
+    margin: 1rem auto 1rem;
     display: flex;
 }
 
@@ -46,7 +51,7 @@
 .titulo-autora{
     margin-top: .5rem;
     color: var(--color-secundario);
-    width: 160px;
+    width: 100px;
     padding: .2rem;
     background-color: #d8d2d2;
     

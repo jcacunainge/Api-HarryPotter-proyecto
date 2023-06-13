@@ -108,3 +108,12 @@ datosLibros.forEach(function(libro) {
 
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Tu código aquí
+  const miElemento = document.getElementById('miElemento');
+  miElemento.addEventListener('click', function() {
+    console.log('Se hizo clic en miElemento');
+  });
+});
