@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/*Colores*/
+:root {
+    --color-primario: #ffc500;
+    --color-secundario: #7F0909;
+  }
+.libros{
+   margin: 2.5rem auto;
+    
+}
+.contenedor-libros{
+    display: flex;
+    width: 100%;
+}
+
+.libros-container{
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 70%;
+    padding: 1rem;
+    border-top: 30px solid var(--color-secundario);  
+    margin: 0 auto 1rem;
+    display: flex;
+}
+
+
+.titulo-libros{
+    font-family: 'Pacifico', cursive;
+    margin-bottom: .5rem;
+    
+}
+.descripción-libro{
+    margin-top: 1rem;
+    text-align: justify;
+    width: 90%;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn-leerLibro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.titulo-autora{
+    margin-top: .5rem;
+    color: var(--color-secundario);
+    width: 160px;
+    padding: .2rem;
+    background-color: #d8d2d2;
+    
+}
+
+.imagen-libro {
+    width: 300px;
+    height: 350px;
+    margin-top: .3rem;
+    
+  }

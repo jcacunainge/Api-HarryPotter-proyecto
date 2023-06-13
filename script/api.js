@@ -4,42 +4,42 @@ const tarjetasContainer = document.getElementById('tarjetas-container');
 const paginationContainer = document.getElementById('pagination-container');
 
 // Variables para la paginación
-const itemsPerPage = 6; // 3 columnas * 2 filas
-let currentPage = 1;
-let currentData = [];
+const elementosPorPagina = 6; // 3 columnas * 2 filas
+let paginaActual = 1;
+let datosActuales = [];
 
 // Hacer una solicitud HTTP a la API
 fetch('https://harry-potter-api.onrender.com/personajes')
   .then(response => response.json())
   .then(data => {
-    // Asignar los datos de la API a la variable currentData
-    currentData = data;
+    // Asignar los datos de la API a la variable datosActuales
+    datosActuales = data;
 
     // Mostrar la primera página
-    showPage(currentData, currentPage);
+    mostrarPagina(datosActuales, paginaActual);
 
     // Calcular el número total de páginas
-    const totalPages = Math.ceil(currentData.length / itemsPerPage);
+    const totalPaginas = Math.ceil(datosActuales.length / elementosPorPagina);
 
     // Generar los botones de paginación
-    generatePagination(totalPages);
+    generarPaginacion(totalPaginas);
   })
   .catch(error => console.error('Error al obtener los personajes:', error));
 
 // Función para mostrar la página actual
-function showPage(data, page) {
+function mostrarPagina(datos, pagina) {
   // Calcular los índices de los elementos que se mostrarán
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+  const indiceInicio = (pagina - 1) * elementosPorPagina;
+  const indiceFin = indiceInicio + elementosPorPagina;
 
   // Filtrar los elementos de acuerdo a los índices calculados
-  const itemsToShow = data.slice(startIndex, endIndex);
+  const elementosAMostrar = datos.slice(indiceInicio, indiceFin);
 
   // Limpiar el contenedor de tarjetas antes de mostrar los nuevos elementos
   tarjetasContainer.innerHTML = '';
 
   // Recorrer los elementos a mostrar y generar las tarjetas
-  itemsToShow.forEach(personaje => {
+  elementosAMostrar.forEach(personaje => {
     const tarjeta = document.createElement('div');
     tarjeta.className = 'card';
 
@@ -47,11 +47,11 @@ function showPage(data, page) {
     tarjeta.innerHTML = `
       <div class="calor-superior-inferior"></div>
       <img class="imagenPersonaje" src="${personaje.imagen}" alt="">
-      <h2>${personaje.personaje}</h2>
+      <h2 class="titulo">${personaje.personaje}</h2>
       <div class="contenedor-descripcion">
         <div class="descripcion-titulo">
           <p>Casa de Hogwarts:</p>
-          <p>Interpretados Por:</p>
+          <p>Interpretado Por:</p>
           <p>Apodo:</p>
         </div>
         <div class="descripcion-valor-titulo">
@@ -69,17 +69,17 @@ function showPage(data, page) {
 }
 
 // Función para generar los botones de paginación
-function generatePagination(totalPages) {
+function generarPaginacion(totalPaginas) {
   paginationContainer.innerHTML = '';
 
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement('button');
-    button.textContent = i;
-    button.addEventListener('click', () => {
-      currentPage = i;
-      showPage(currentData, currentPage);
+  for (let i = 1; i <= totalPaginas; i++) {
+    const boton = document.createElement('button');
+    boton.textContent = i;
+    boton.addEventListener('click', () => {
+      paginaActual = i;
+      mostrarPagina(datosActuales, paginaActual);
     });
 
-    paginationContainer.appendChild(button);
+    paginationContainer.appendChild(boton);
   }
 }
